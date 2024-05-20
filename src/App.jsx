@@ -1,10 +1,15 @@
+import { ReactFlowProvider } from 'reactflow'
+import Flow from './Components/Flow'
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Vite + React
-      </h1>
-    </>
+    <div className="h-full">
+      {/* // The ReactFlowProvider component is a context provider from the react-flow-renderer library */}
+      <ReactFlowProvider>
+        {/* // The Flow component is responsible for rendering the flow diagram */}
+        <Flow />
+      </ReactFlowProvider>
+    </div>
   )
 }
 
